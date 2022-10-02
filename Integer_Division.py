@@ -1,2 +1,3 @@
-x=int(input())//10
-print(x)
+n=int(input())
+k=n//10
+print(k)
