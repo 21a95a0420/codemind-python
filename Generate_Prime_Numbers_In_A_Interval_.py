@@ -1,14 +1,13 @@
-def prime(x):
-    s=0
-    if x==1:
+def prime(n):
+    c=0
+    if n==1:
         return False
-    for i in range(2,x):
-        if x%i==0:
-            s+=1
-    return (s==0)
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
 a=int(input())
 b=int(input())
 for i in range(a,b+1):
     if prime(i)==True:
         print(i)
-        
