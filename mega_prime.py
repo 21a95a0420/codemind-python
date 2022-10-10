@@ -1,16 +1,22 @@
 def prime(x):
-    if n==1:return False
+    if x==1:
+        return False
     for i in range(2,x):
-        if x%i==0:return False
+        if x%i==0:
+            return False
     return True
+def mok(k):
+    b=str(k)
+    c=0
+    for i in range(len(b)):
+        a=k%10
+        k=k//10
+        if prime(a)==True:
+            c+=1
+    return(c)
 n=int(input())
-s=0
-if prime(n):
-    while n:
-        if prime(n%10)==False:
-            print('Not Mega Prime')
-            s=1
-            break
-        n//=10
-    if s==0:print('Mega Prime')
-else:print('Not Mega Prime')
+s=str(n)
+if prime(n)==True and mok(n)==len(s):
+    print('Mega Prime')
+else:
+    print('Not Mega Prime')
